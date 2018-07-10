@@ -1,0 +1,63 @@
+.resultados .imagen-resultado{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 180px;
+    width: 100%;
+}
+.resultados .contenedor{
+    padding: 10px;
+    background-color: white;
+    -webkit-box-shadow: 10px 10px 32px -13px rgba(207,207,207,1);
+    -moz-box-shadow: 10px 10px 32px -13px rgba(207,207,207,1);
+    box-shadow: 10px 10px 32px -13px rgba(207,207,207,1);
+    border: 1px solid #f1f1f1;
+    border-radius: 2px;
+    margin-top: 20px;
+}
+.resultados .precio{
+    text-align: center;
+}
+.resultados .box-informacion{
+    border-right-style: dotted;
+    color: #d2c9c9;
+    font-size: 1px;
+    border-right-width: 1em;
+}
+.resultados .precio span{
+    font-size: 12px;
+    color: #444444;
+}
+.resultados .precio .moneda{
+    font-size: 14px;
+    color: #e16800;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.resultados .precio .moneda span{
+    font-size: 2em;
+    position: relative;
+    top: 5px;
+    left: 1px;
+    color: #e16800;
+    font-weight: 500;
+}
+
+@media (max-width: 	768px) {
+    .resultados .box-informacion{
+        border-bottom-style: dotted;
+        color: #d2c9c9;
+        font-size: 1px;
+        border-right: none;
+        border-bottom-width: 2em;
+        border-right-width: 0em;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+    }
+    .resultados .precio {
+        margin-top: 15px;
+    }
+    .resultados .sub-titulo.h4 {
+        margin: 10px 0px 10px 0px;
+    }
+}

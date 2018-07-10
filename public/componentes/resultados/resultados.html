@@ -1,0 +1,21 @@
+<section class="resultados">
+    <div class="row contenedor" data-ng-repeat="hotel in $ctrl.datosHotel  | orderBy: $index"> 
+        <div class="col-sm-12 col-md-4 col-lg-4 imagen-resultado" style="background-image: url('../../assets/images/hotels/{{hotel.image}}');">
+       </div>
+        <div class="col-sm-12 col-md-5 col-lg-5 box-informacion">
+            <article class="informacion">
+                <h4 class="sub-titulo h4">{{hotel.name}}</h4>
+                <div ><div class="estrella" ng-repeat-n="hotel.stars"></div></div>
+                <div class="box-iconos"><div  data-ng-repeat="iconos in hotel.amenities"  class="icono ruta-icono" style="background-image: url('../../assets/icons/amenities/{{iconos}}.svg');"></div></div>
+            </article>
+        </div>
+        <div class="col-sm-12 col-md-3 col-lg-3">
+            <div class="precio">
+                <span>Precio por noche por</span>
+                <span>habitación</span>
+                <div  class="moneda">ARS<span>{{hotel.price}}</span></div>
+                <div class="btn-principal">Ver hotel</div>
+            </div>
+        </div>
+    </div>
+</section>

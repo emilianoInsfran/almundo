@@ -1,0 +1,93 @@
+.filtro {
+    width: 100%;
+    margin-top: 20px;
+}
+.filtro-mobile{
+    display: none;
+}
+.filtro h4{
+    margin: 0px;
+}
+.filtro .sub-titulo{
+   cursor: pointer;
+   position: relative;
+}
+
+.filtro article{
+    background-color: white;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    -webkit-box-shadow: 10px 10px 32px -13px rgba(207,207,207,1);
+    -moz-box-shadow: 10px 10px 32px -13px rgba(207,207,207,1);
+    box-shadow: 10px 10px 32px -13px rgba(207,207,207,1);
+    border: 1px solid #f1f1f1;
+    border-radius: 2px;
+}
+
+.filtro .lupa{
+    background-image: url('../../assets/icons/filters/search.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 15px;
+    max-width: 25px;
+    width: 100%;
+    display: inline-block;
+}
+.filtro .flecha{
+    background-image: url('../../assets/icons/filters/flecha.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 14px;
+    max-width: 25px;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+.filtro  .busqueda-hotel{
+    margin-top: 10px;
+
+}
+.filtro  .busqueda-estrella{
+    margin: 10px 6px;
+}
+.filtro  .busqueda-estrella input{
+    margin-right: 5px;
+}
+.filtro  .busqueda-hotel input{
+    height: 30px;
+    padding: 2px 6px;
+    width: 100%;
+}
+.filtro .estrella-azul{
+    background-image: url('../../assets/icons/filters/star_blue.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 15px;
+    max-width: 18px;
+    width: 100%;
+    display: inline-block;
+}
+
+
+@media (max-width: 	768px) {
+    .filtro {
+      display: none;
+    }
+    .filtro-mobile{
+        display: block;
+        text-align: center;
+        color: #3591c0;
+        font-weight: 600;
+        font-size: 18px;
+        height: 40px;
+        background-color: white;
+        padding-top: 8px;
+        cursor: pointer;
+    }
+}

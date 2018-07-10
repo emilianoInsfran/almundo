@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es"  >  
+    <head> 
+        <meta charset="utf-8" />
+        <title>almundo</title> 
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!--css-->
+        <link rel="stylesheet" href="modulos/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="componentes/filtro/filtro.css">
+        <link rel="stylesheet" href="componentes/resultados/resultados.css">
+        <!-- js -->
+        <script type="text/javascript" src="modulos/js/angular.min.js"></script>
+        <script type="text/javascript" src="modulos/js/angular-repeat-n.min.js"></script>
+        <script type="text/javascript" src="modulos/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="src/app.js"></script>
+        <script type="text/javascript" src="componentes/filtro/filtro-ctrl.js"></script>
+        <!-- <script>
+            var almundo = angular.module("main",['ui.router']);
+            almundo.config(function($stateProvider, $urlRouterProvider) {
+
+                    $urlRouterProvider.otherwise("/buscador");
+
+                    $stateProvider
+                        .state('buscador', {
+                            url: "/buscador",
+                            templateUrl: "index.html",
+                            controller: 'MainCtrl'
+                        })
+                });
+        </script> -->
+    </head> 
+    <body ng-app="app" ng-controller="MainCtrl as ctrl">
+        <header class="head">
+            <section class="contenedor">
+                <div class="logo"></div>
+            </section>
+        </header>
+        <div class="contenedor-secundario ">
+            <div class="row margin-cero">
+                <div class="col-md-4 col-lg-4">
+                    <filtro ></filtro>
+                  
+                </div>
+                <div class="col-md-8 col-lg-8">
+                    <resultado datos-hotel="data"></resultado>
+                </div>
+            </div>
+        </div>
+      <!--pages-->
+
+        <!-- <div ui-view></div> -->
+
+   </body> 
+</html>

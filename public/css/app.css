@@ -1,0 +1,84 @@
+/* estrellas =#ffbb00 */
+body{
+    margin: 0px;
+    background-color: #f4f4f4;
+}
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+}
+.contenedor{
+    max-width: 1280px;
+    width: 100%;
+    margin: auto;
+    padding-left: 5px;
+}
+.margin-cero{
+    margin: 0px;
+}
+.contenedor-secundario{
+    max-width: 1245px;
+    width: 100%;
+    margin: auto;
+    margin-top: 82px;
+}
+.sub-titulo{
+    color: #3591c0;
+    font-weight: 600;
+    font-size: 16px;
+}
+.sub-titulo.h4{
+    margin-bottom: 2px;
+}
+.btn-principal{
+    height: 30px;
+    width: 100%;
+    color: white;
+    background-color: #002979;
+    border-radius: 2px;
+    cursor: pointer;
+    text-align: center;
+    padding: 3px;
+    font-size: 1em;
+    font-weight: 500;
+}
+.head{
+    background-color: #124384;
+}
+.head .logo{
+    background-image: url('../assets/images/logo-almundo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 80px;
+    max-width: 250px;
+    width: 100%;
+}
+.estrella{
+    background-image: url('../assets/icons/filters/star.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 15px;
+    max-width: 18px;
+    width: 100%;
+    display: inline-block;
+}
+.box-iconos{
+    margin-top: 15px;
+}
+.icono{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 15px;
+    max-width: 26px;
+    width: 100%;
+    display: inline-block;
+}
+
+@media (max-width: 	768px) {
+
+}
