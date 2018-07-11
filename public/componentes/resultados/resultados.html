@@ -1,5 +1,6 @@
+
 <section class="resultados">
-    <div class="row contenedor" data-ng-repeat="hotel in $ctrl.datosHotel  | orderBy: $index"> 
+    <div class="row contenedor" data-ng-repeat="hotel in $ctrl.datosHotel  | filter: $ctrl.filtroNombre as results track by hotel.name"> 
         <div class="col-sm-12 col-md-4 col-lg-4 imagen-resultado" style="background-image: url('../../assets/images/hotels/{{hotel.image}}');">
        </div>
         <div class="col-sm-12 col-md-5 col-lg-5 box-informacion">

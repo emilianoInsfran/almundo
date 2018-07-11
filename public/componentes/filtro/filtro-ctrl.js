@@ -1,17 +1,29 @@
-angular.controller("Filtro", function Filtro($http,$scope){
+(function(angular) {
+    'use strict';
+    function FiltroController($scope, $element, $attrs,$http) {
+        var ctrl = this;
+    
+        ctrl.filtroNombre = true;
+        ctrl.filtroEstrella = true;
+        ctrl.lugar = '';
 
-    $scope.filtroNombre = true;
-    $scope.filtroEstrella = true;
-
-    $scope.onClickMostrarElemento = function(mostrar){
-        if(mostrar === true) return false;
-        else return true;
-    }
-    $scope.mostrarFiltroNombre = function(data){
-        $scope.filtroNombre = $scope.onClickMostrarElemento(data);
-    }
-    $scope.mostrarFiltroEstrella = function(data){
-        $scope.filtroEstrella = $scope.onClickMostrarElemento(data);
-    }
-
-});
+        ctrl.onClickMostrarElemento = function(mostrar){
+            if(mostrar === true) return false;
+            else return true;
+        }
+        ctrl.mostrarFiltroNombre = function(data){
+            ctrl.filtroNombre = ctrl.onClickMostrarElemento(data);
+        }
+        ctrl.mostrarFiltroEstrella = function(data){
+            ctrl.filtroEstrella = ctrl.onClickMostrarElemento(data);
+        }
+   }
+    
+    angular.module("app").component('filtro', {
+        templateUrl: '../componentes/filtro/filtro.html',
+        controller: FiltroController,
+        bindings: {
+            datos: '&'
+        }
+    });
+})(window.angular);
