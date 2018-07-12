@@ -80,5 +80,8 @@ header{
 }
 
 @media (max-width: 	768px) {
-
+    .icono {
+        height: 18px;
+        margin-right: 5px;
+    }
 }

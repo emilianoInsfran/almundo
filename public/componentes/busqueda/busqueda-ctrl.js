@@ -2,22 +2,38 @@
     'use strict';
     function FiltroController($scope,$http) {
         var ctrl = this;
-        ctrl.mostrarDatosNombre = function(data){
-            ctrl.nombre = data;
-        }
-        ctrl.mostrarDatosEstrella = function(data){
-            console.log("imostrarDatosEstrellai",data);
-            ctrl.estrella = data;
+
+        ctrl.filtrarNombreHotel = function(busqueda){
+            ctrl.nombre = busqueda;
+
+            var data = {
+                name: ctrl.nombre 
+            };
+        
+            $http.post('http://localhost:5600/buscarHotel',data )
+            .then( 
+                function successCallback(resp){
+                     ctrl.data=resp.data;
+                   
+                },
+                function errorCallback(err){
+                }
+            );
         }
 
-        $http({
-            method: 'GET',
-            url: '../../data/data.json'
-        }).then(function successCallback(response) {
-            ctrl.data = response.data;
-        }, function errorCallback(response) {
-           alert(response)
-        });
+        ctrl.mostrarHotelesInicio = function(){
+            // BD subida a https://mlab.com/databases/almundohoteles
+            $http({
+                method: 'GET',
+                url: 'http://localhost:5600/obtenerHoteles'
+            }).then(function successCallback(response) {
+                ctrl.data = response.data;
+            }, function errorCallback(response) {
+            alert(response)
+            });
+        }
+
+        ctrl.mostrarHotelesInicio ();
    }
     
     angular.module("app").component('busqueda', {

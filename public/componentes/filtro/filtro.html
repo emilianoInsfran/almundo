@@ -1,39 +1,41 @@
-<section class="filtro-mobile">Filtrar</section>
 <section class="filtro" >
-    <article>
-        <h4>Filtros </h4>
+    <article  data-ng-click="$ctrl.accionFiltroMobile($ctrl.showFiltro,$ctrl.hideFiltro)">
+        <h4>Filtros  </h4>
     </article>
-    <article class="busqueda" >
-        <div class="sub-titulo" data-ng-click = "$ctrl.mostrarFiltroNombre($ctrl.filtroNombre)">
-            <div class="lupa"></div>
-            <span>Nombre del hotel</span>
-            <div class="flecha"></div>
-        </div>
-        <div class="busqueda-hotel" data-ng-show = "$ctrl.filtroNombre">
-            <div class="row">
-                <div class="col-md-8 col-lg-8">
-                    <input type="text" placeholder="Ingresa el nombre del hotel" data-ng-model="$ctrl.lugar">
-                </div>
-                <div class="col-md-4 col-lg-4">
-                    <div class="btn-principal" data-ng-click="$ctrl.datos({nombre:$ctrl.lugar})">Aceptar</div>
-                </div>
-            </div>
-        </div>
-    </article>
+    <div ng-class="{ocultar: $ctrl.hideFiltro, mostrar: $ctrl.showFiltro}">
 
-    <article >
-        <div class="sub-titulo"  data-ng-click = "$ctrl.mostrarFiltroEstrella($ctrl.filtroEstrella)">
-            <div class="estrella-azul"></div>
-            <span>Estrellas</span>
-            <div class="flecha"></div>
-        </div>
-        <div class="busqueda-estrella" data-ng-show = "$ctrl.filtroEstrella">
-            <div><input type="checkbox" data-ng-model="ctrl.seleccionarTodasEstrellas"><span>Todas las estrellas</span></div>
-            <div><input type="checkbox" data-ng-disabled="ctrl.seleccionarTodasEstrellas" data-ng-checked="ctrl.seleccionarTodasEstrellas"><div class="estrella"></div><div class="estrella"></div><div class="estrella"></div><div class="estrella"></div><div class="estrella"></div></div>
-            <div><input type="checkbox" data-ng-disabled="ctrl.seleccionarTodasEstrellas" data-ng-checked="ctrl.seleccionarTodasEstrellas"><div class="estrella"></div><div class="estrella"></div><div class="estrella"></div><div class="estrella"></div></div>
-            <div><input type="checkbox" data-ng-disabled="ctrl.seleccionarTodasEstrellas" data-ng-checked="ctrl.seleccionarTodasEstrellas"><div class="estrella"></div><div class="estrella"></div><div class="estrella"></div></div>
-            <div><input type="checkbox" data-ng-disabled="ctrl.seleccionarTodasEstrellas" data-ng-checked="ctrl.seleccionarTodasEstrellas"><div class="estrella"></div><div class="estrella"></div></div>
-            <div><input type="checkbox" data-ng-disabled="ctrl.seleccionarTodasEstrellas" data-ng-checked="ctrl.seleccionarTodasEstrellas"><div class="estrella"></div></div>
-        </div>
-    </article>
+        <article class="busqueda" >
+            <div class="sub-titulo" data-ng-click = "$ctrl.mostrarFiltroNombre($ctrl.filtroNombre)">
+                <div class="lupa"></div>
+                <span>Nombre del hotel</span>
+                <div class="flecha"></div>
+            </div>
+            <div class="busqueda-hotel" data-ng-show = "$ctrl.filtroNombre">
+                <form class="row">
+                    <div class="col-md-8 col-lg-8">
+                        <input type="text" placeholder="Ingresa el nombre del hotel" data-ng-model="$ctrl.lugar" required>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <button class="btn-principal" data-ng-click="$ctrl.datos({nombre:$ctrl.lugar})" data-ng-disabled="!$ctrl.lugar">Aceptar</button>
+                    </div>
+                </form>
+            </div>
+        </article>
+
+        <article >
+            <div class="sub-titulo"  data-ng-click = "$ctrl.mostrarFiltroEstrella($ctrl.filtroEstrella)">
+                <div class="estrella-azul"></div>
+                <span>Estrellas</span>
+                <div class="flecha"></div>
+            </div>
+            <div class="busqueda-estrella" data-ng-show = "$ctrl.filtroEstrella">
+                <div><input type="checkbox" data-ng-model="ctrl.seleccionarTodasEstrellas"><span>Todas las estrellas</span></div>
+                <div><input type="checkbox" data-ng-disabled="ctrl.seleccionarTodasEstrellas" data-ng-checked="ctrl.seleccionarTodasEstrellas" ng-true-value="5"><div class="estrella"></div><div class="estrella"></div><div class="estrella"></div><div class="estrella"></div><div class="estrella"></div></div>
+                <div><input type="checkbox" data-ng-disabled="ctrl.seleccionarTodasEstrellas" data-ng-checked="ctrl.seleccionarTodasEstrellas" ng-true-value="4"><div class="estrella"></div><div class="estrella"></div><div class="estrella"></div><div class="estrella"></div></div>
+                <div><input type="checkbox" data-ng-disabled="ctrl.seleccionarTodasEstrellas" data-ng-checked="ctrl.seleccionarTodasEstrellas" ng-true-value="3"><div class="estrella"></div><div class="estrella"></div><div class="estrella"></div></div>
+                <div><input type="checkbox" data-ng-disabled="ctrl.seleccionarTodasEstrellas" data-ng-checked="ctrl.seleccionarTodasEstrellas" ng-true-value="2"><div class="estrella"></div><div class="estrella"></div></div>
+                <div><input type="checkbox" data-ng-disabled="ctrl.seleccionarTodasEstrellas" data-ng-checked="ctrl.seleccionarTodasEstrellas" ng-true-value="1"><div class="estrella"></div></div>
+            </div>
+        </article>
+    </div>
 </section>

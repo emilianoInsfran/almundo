@@ -6,6 +6,8 @@
         ctrl.filtroNombre = true;
         ctrl.filtroEstrella = true;
         ctrl.lugar = '';
+        ctrl.hideFiltro = true;
+        ctrl.showFiltro = false;
 
         ctrl.onClickMostrarElemento = function(mostrar){
             if(mostrar === true) return false;
@@ -16,6 +18,10 @@
         }
         ctrl.mostrarFiltroEstrella = function(data){
             ctrl.filtroEstrella = ctrl.onClickMostrarElemento(data);
+        }
+        ctrl.accionFiltroMobile = function(show,hide){
+            ctrl.showFiltro = ctrl.onClickMostrarElemento(show);
+            ctrl.hideFiltro = ctrl.onClickMostrarElemento(hide);
         }
    }
     
